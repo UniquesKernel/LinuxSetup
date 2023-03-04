@@ -1,2 +1,2 @@
-# LinuxSetup
-Contains everything needed to setup linux environment.
+# Linux Setup
+Contains my setup for linux.
