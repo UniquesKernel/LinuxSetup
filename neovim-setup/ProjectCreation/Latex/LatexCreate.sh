@@ -5,13 +5,15 @@ mkdir $1/01-FrontMatter
 mkdir $1/02-Body
 mkdir $1/03-EndMatter
 
+pushd ~/LinuxSetup > /dev/null
 # find the git root
 gitroot=$(git rev-parse --show-toplevel)
 gitrootToSnippet=${gitroot}/neovim-setup/ProjectCreation/snippet/LaTeX
+popd > /dev/null
+echo $gitrootToSnippet
+tree .
 
-
-
-cp ${gitrootToSnippet}/tikz-uml.sty ./$1
+cp ${gitrootToSnippet}/tikz-uml.sty ./$1/tikz-uml.sty
 cp ${gitrootToSnippet}/Latex.tex ./$1/$2.tex
 cp ${gitrootToSnippet}/Preamble.tex ./$1/00-DocumentSettings/Preamble.tex
 cp ${gitrootToSnippet}/PreTitle.tex ./$1/00-DocumentSettings/PreTitle.tex
