@@ -69,7 +69,7 @@ require('lazy').setup({
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
   'preservim/nerdtree',
-  'github/copilot.vim',
+  -- 'github/copilot.vim',
   'lervag/vimtex',
   'SirVer/ultisnips',
   'honza/vim-snippets',
