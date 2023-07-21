@@ -8,27 +8,133 @@ ${3:Summary of the issue/task/project}
 ## Background
 ${4:Background information, relevant details, dependencies, and how it fits into the larger project}
 
+## Discovery
+${5:Details about initial discovery process, findings, and implications}
+
 ## Requirements
-${5:What needs to be achieved or what problem needs to be solved}
+${6:What needs to be achieved or what problem needs to be solved}
 
 ## Proposed Solution
-${6:Details about the approach and solution for the task or problem}
+${7:Details about the approach and solution for the task or problem}
 
 ## Risk Assessment
-${7:Potential risks or challenges related to the task}
+${8:Potential risks or challenges related to the task}
+
+## Time Estimate
+${9:Estimated time to completion, and rationale for estimate}
 
 ## Testing Approach
-${8:How you plan to test the solution}
+${10:How you plan to test the solution}
 
 ## Worklog
-#### Entry Date: ${9:Date}
+#### Entry ${11:Entry Number}: ${12:Entry Title}
 
-- **Discussion & Decisions:** ${10:Discussions with team members, any decisions made}
-- **Progress:** ${11:What you did, what you found, etc.}
-- **Challenges & Solutions:** ${12:Any challenges faced and how you tackled them}
-- **Next Steps:** ${13:What you plan to do next, any outstanding questions}
+- **Discussion & Decisions:** 
+    - ${13:Discussion/Decision}
 
-## Conclusion
-${14:A summary of the current state of the task, what's next, and any further thoughts or issues to consider.}
+- **Progress:** 
+    - ${14:Progress info}
+
+- **Challenges & Solutions:** 
+    - **Challenge:** ${15:Challenge}
+        - **Solution:** ${16:Solution}
+
+- **Next Steps:** 
+    - ${17:Next Step}
+endsnippet
+
+snippet worklog "Worklog Entry" a
+#### Entry ${1:Entry Number}: ${2:Entry Title}
+
+- **Discussion & Decisions:** 
+    - ${3:Discussion/Decision}
+
+- **Progress:** 
+    - ${4:Progress info}
+
+- **Challenges & Solutions:** 
+    - **Challenge:** ${5:Challenge}
+        - **Solution:** ${6:Solution}
+
+- **Next Steps:** 
+    - ${7:Next Step}
+endsnippet
+
+# For adding more Discussions & Decisions
+snippet discussion "Discussion & Decision" b
+- **Discussion & Decisions:** 
+    - ${1:Discussion/Decision}
+endsnippet
+
+# For adding more Progress info
+snippet progress "Progress Info" b
+- **Progress:** 
+    - ${1:Progress info}
+endsnippet
+
+# For adding more Challenges & Solutions
+snippet challenge "Challenges & Solutions" b
+- **Challenges & Solutions:** 
+    - **Challenge:** ${1:Challenge}
+        - **Solution:** ${2:Solution}
+endsnippet
+
+# For adding more Next Steps
+snippet nextstep "Next Steps" b
+- **Next Steps:** 
+    - ${1:Next Step}
+endsnippet
+
+# For adding more Discussions & Decisions
+snippet discussion "Discussion & Decision" b
+- **Discussion & Decisions:** 
+    - ${1:Discussion/Decision}
+endsnippet
+
+# For adding more Progress info
+snippet progress "Progress Info" b
+- **Progress:** 
+    - ${1:Progress info}
+endsnippet
+
+# For adding more Challenges & Solutions
+snippet challenge "Challenges & Solutions" b
+- **Challenges & Solutions:** 
+    - **Challenge:** ${1:Challenge}
+        - **Solution:** ${2:Solution}
+endsnippet
+
+# For adding more Next Steps
+snippet nextstep "Next Steps" b
+- **Next Steps:** 
+    - ${1:Next Step}
+endsnippet
+
+snippet discovery "Discovery Template" b
+- **Initial Findings:** ${1:What was initially discovered during the process}
+- **Implications:** ${2:What are the implications of these findings}
+- **Further Investigations:** ${3:What needs to be investigated further}
+endsnippet
+
+
+snippet risk "Risk Assessment Template" b
+- **Risk:** ${1:What is the risk}
+- **Severity:** ${2:How severe would an occurrence be}
+- **Probability:** ${3:How likely is the risk to occur}
+- **Mitigation Strategy:** ${4:What is the plan to mitigate the risk}
+endsnippet
+
+snippet requirement "Requirement Template" b
+- **Requirement:** ${1:What is the requirement}
+- **Priority:** ${2:What is the priority of this requirement}
+- **Owner:** ${3:Who is responsible for this requirement}
+- **Status:** ${4:What is the current status of this requirement}
+endsnippet
+
+snippet solution "Proposed Solution Template" b
+- **Problem:** ${1:What problem does this solution solve}
+- **Solution:** ${2:What is the proposed solution}
+- **Reasoning:** ${3:Why was this solution chosen}
+- **Expected Outcome:** ${4:What is the expected outcome of this solution}
 endsnippet
 
