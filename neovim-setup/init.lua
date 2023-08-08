@@ -79,6 +79,15 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = {"MarkdownPreview", "MarkdownPreviewStop"},
+    lazy = false,
+    build = function() vim.fn["mkdp#util#install"]() end,
+    init = function()
+        vim.g.mkdp_theme = 'dark'
+    end
+  },
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   {
@@ -520,14 +529,6 @@ cmp.setup {
   },
 }
 
--- 
-
--- UltiSnips 
-
-vim.g.UltiSnipsExpandTrigger="<tab>"
-vim.g.UltiSnipsJumpForwardTrigger="<c-b>"
-vim.g.UltiSnipsJumpBackwardTrigger="<c-z>"
-
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 
@@ -540,10 +541,18 @@ vim.keymap.set('i', '<leader><', '<><left>', { silent = true })
 vim.keymap.set('i', '<', '<', { silent = true })
 vim.keymap.set('i', '(', '()<left>', { silent = true })
 vim.keymap.set('i', '½', '<Esc><S-a>', { silent = true })
+vim.keymap.set('i', '<leader>`', '``<left>', { silent = true })
+
 
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+--vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fg', function()
+    builtin.live_grep({
+        vimgrep_arguments = { 'rg', '--hidden', '--color=never', '--glob', '!**/.git/*', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case' }
+    })
+end, {})
+
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
@@ -555,3 +564,16 @@ vim.o.tabstop=2
 vim.o.shiftwidth=2
 vim.o.autoindent=true
 
+-- automatic line wrapping
+vim.opt.textwidth=85
+vim.opt.wrap=true
+vim.opt.linebreak=true
+
+-- UltiSnips Config
+vim.g.UltiSnipsExpandTrigger = "<tab>"
+vim.g.UltiSnipsJumpForwardTrigger = "<c-n>"
+vim.g.UltiSnipsJumpBackwardTrigger = "<c-b>"
+
+vim.keymap.set('i', '<leader>check', '&#10003;', { silent = true })
+vim.keymap.set('i', '<leader>inprog', '&#8857;', { silent = true })
+vim.keymap.set('i', '<leader>block', '&#10007;', { silent = true })
