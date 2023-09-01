@@ -323,7 +323,7 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'typescript', 'vimdoc', 'vim' },
+  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'typescript', 'vimdoc', 'vim', 'java' },
 
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
   auto_install = false,
@@ -577,3 +577,4 @@ vim.g.UltiSnipsJumpBackwardTrigger = "<c-b>"
 vim.keymap.set('i', '<leader>check', '&#10003;', { silent = true })
 vim.keymap.set('i', '<leader>inprog', '&#8857;', { silent = true })
 vim.keymap.set('i', '<leader>block', '&#10007;', { silent = true })
+vim.keymap.set('i', '<leader>verify', '&#x21BA;', { silent = true })
