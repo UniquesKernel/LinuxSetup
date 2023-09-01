@@ -3,39 +3,47 @@ snippet devnote "DevNote Template" b
 mainfont: DejaVu Sans
 ---
 
-# ${1:Title}
+# ${1:Title} &#8857;
 
 **Date:** ${2:date}
 
-## Overview
+##### Symbol Table:
+| Symbol | Description |
+|--------|-------------|
+| &#10003; | Section is complete |
+| &#8857; | Section needs work |
+| &#10007; | Section is blocked |
+| &#x21BA; | Section is Complete but might need re-visit pending new infomation |
+
+## Overview &#8857;
 
 ${3:Summary of the issue/task/project}
 
-## Background
+## Background &#8857;
 
 ${4:Background information, relevant details, dependencies, and how it fits into the larger project}
 
-## Discovery
+## Discovery &#8857;
 
 ${5:Details about initial discovery process, findings, and implications}
 
-## Requirements
+## Requirements &#8857;
 
 ${6:What needs to be achieved or what problem needs to be solved}
 
-## Proposed Solution
+## Proposed Solution &#8857;
 
 ${7:Details about the approach and solution for the task or problem}
 
-## Risk Assessment
+## Risk Assessment &#8857;
 
 ${8:Potential risks or challenges related to the task}
 
-## Time Estimate
+## Time Estimate &#8857;
 
 ${9:Estimated time to completion, and rationale for estimate}
 
-## Testing Approach
+## Testing Approach &#8857;
 
 ${10:How you plan to test the solution}
 
@@ -115,7 +123,6 @@ snippet discovery "Discovery Template" b
 - **Implications:** ${2:What are the implications of these findings}
 - **Further Investigations:** ${3:What needs to be investigated further}
 endsnippet
-
 
 snippet risk "Risk Assessment Template" b
 - **Risk:** ${1:What is the risk}
@@ -209,4 +216,16 @@ ${8:How you plan to test the fix, including both automated and manual testing}
     - ${14:Progress info}
 - **Next Steps:**
     - ${17:Next Step}
+endsnippet
+
+snippet reproduce "Steps to Reproduce Issue" b
+## Steps to Reproduce
+
+${1:Detailed steps to reproduce the issue}
+endsnippet
+
+snippet rootcause "Root Cause Analysis" b
+## Root Cause Analysis
+
+${1:Investigation into the underlying cause of the defect}
 endsnippet
