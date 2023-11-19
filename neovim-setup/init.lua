@@ -75,6 +75,7 @@ require('lazy').setup({
   'honza/vim-snippets',
   'sharkdp/fd',
   "junegunn/fzf.vim",
+  'iamcco/markdown-preview.nvim',
 
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
@@ -169,14 +170,9 @@ require('lazy').setup({
   },
 
   {
-    -- Add indentation guides even on blank lines
-    'lukas-reineke/indent-blankline.nvim',
-    -- Enable `lukas-reineke/indent-blankline.nvim`
-    -- See `:help indent_blankline.txt`
-    opts = {
-      char = '┊',
-      show_trailing_blankline_indent = false,
-    },
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    opts = {}
   },
 
   -- "gc" to comment visual regions/lines
@@ -564,7 +560,6 @@ vim.o.tabstop=2
 vim.o.shiftwidth=2
 vim.o.autoindent=true
 
--- automatic line wrapping
 vim.opt.textwidth=85
 vim.opt.wrap=true
 vim.opt.linebreak=true
