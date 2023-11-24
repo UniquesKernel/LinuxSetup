@@ -76,6 +76,7 @@ require('lazy').setup({
   'sharkdp/fd',
   "junegunn/fzf.vim",
   'iamcco/markdown-preview.nvim',
+  'mfussenegger/nvim-dap',
 
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
@@ -570,6 +571,6 @@ vim.g.UltiSnipsJumpForwardTrigger = "<c-n>"
 vim.g.UltiSnipsJumpBackwardTrigger = "<c-b>"
 
 vim.keymap.set('i', '<leader>check', '&#10003;', { silent = true })
-vim.keymap.set('i', '<leader>inprog', '&#8857;', { silent = true })
+vim.keymap.set('i', '<leader>verify', '&#8857;', { silent = true })
 vim.keymap.set('i', '<leader>block', '&#10007;', { silent = true })
-vim.keymap.set('i', '<leader>verify', '&#x21BA;', { silent = true })
+vim.keymap.set('i', '<leader>inprog', '&#x21BA;', { silent = true })
