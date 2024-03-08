@@ -17,11 +17,12 @@ local plugins = {
     opts = {
       ensure_installed = {
         "jdtls", 
-        "haskell-language-server",
-        "rust-analyzer",
-        "asm-lsp",
         "clangd",
-        "grammarly-languageserver",
+        "typescript-language-server",
+        "bash-language-server",
+        "angular-language-server",
+        "haskell-language-server",
+        "pylyzer",
       },
     },
   },
