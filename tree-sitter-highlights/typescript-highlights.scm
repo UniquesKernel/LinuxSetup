@@ -11,7 +11,7 @@
 (((property_identifier) @identifer (#eq? @identifer "forEach")) (#set! conceal "∀"))
 (((property_identifier) @identifer (#eq? @identifer "filter")) (#set! conceal "⊆"))
 (((property_identifier) @identifer (#eq? @identifer "map")) (#set! conceal "↦"))
-(((property_identifier) @identifer (#eq? @identifer "reduce")) (#set! conceal "⊕"))
+(((property_identifier) @identifer (#eq? @identifer "reduce")) (#set! conceal "⨆"))
 
 
 ; inherits: ecma
